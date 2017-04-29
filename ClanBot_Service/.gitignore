@@ -304,7 +304,6 @@ $RECYCLE.BIN/
 
 *.config
 *.dbml
-*.csproj
 *.resx
 *.layout
 bin/

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Discord.Net.Commands</id>
+    <version>0.9.6</version>
+    <title>Discord.Net.Commands</title>
+    <authors>RogueException</authors>
+    <owners>RogueException</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/RogueException/Discord.Net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Discord.Net extension adding basic command support.</description>
+    <summary />
+    <tags>discord discordapp</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Discord.Net" version="0.9.6" />
+      </group>
+      <group targetFramework="Unsupported0.0">
+        <dependency id="NETStandard.Library" version="1.6.0" />
+        <dependency id="Discord.Net" version="0.9.6" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

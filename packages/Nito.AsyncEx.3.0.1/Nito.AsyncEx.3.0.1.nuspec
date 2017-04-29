@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Nito.AsyncEx</id>
+    <version>3.0.1</version>
+    <title>Async and Task Helpers</title>
+    <authors>Stephen Cleary</authors>
+    <owners>Stephen Cleary</owners>
+    <projectUrl>https://github.com/StephenCleary/AsyncEx</projectUrl>
+    <iconUrl>https://github.com/StephenCleary/AsyncEx/raw/master/AsyncEx.128.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A helper library for the Task-Based Asynchronous Pattern (TAP).</description>
+    <summary>A helper library for the Task-Based Asynchronous Pattern (TAP).</summary>
+    <releaseNotes>Added support for WPA targets; better usability for AsyncLock and AsyncReaderWriterLock.</releaseNotes>
+    <language>en-US</language>
+    <tags>async await async-await task asynchronous net45 win8 net40 netcore45 sl5 wp8 wpa81 nito</tags>
+    <dependencies>
+      <group />
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+      </group>
+      <group targetFramework="Silverlight5.0">
+        <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net40+win80+sl40+wp71">
+        <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net40+win80+sl50+wp80+wpa81">
+        <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net45+win80+wp80+wpa81" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework="Windows8.0" />
+      <group targetFramework="WindowsPhone8.0" />
+      <group targetFramework="Unsupported0.0" />
+    </dependencies>
+  </metadata>
+</package>
