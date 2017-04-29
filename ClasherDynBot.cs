@@ -62,7 +62,7 @@ namespace ClanBot_Service
 
             discord.ExecuteAndWait(async () =>
             {
-                await discord.Connect("MzA0NjIwMzY0MjI1NTc2OTYw.C95Fsw.q3DosQGk2Pg_bl9thNs8Wpg5-d0", Discord.TokenType.Bot);
+                await discord.Connect(Properties.Settings.Default.Key, Discord.TokenType.Bot);
             });
         }
 
