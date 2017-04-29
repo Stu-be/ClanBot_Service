@@ -34,8 +34,7 @@ namespace ClanBot_Service
             commands = discord.GetService<CommandService>();
 
             Help.RegisterHelpCommand(commands, discord);
-
-            Help.RegisterHelpCommand(commands, discord);
+            Help.RegisterShowMeTheCodeCommand(commands, discord);
 
             Fun.RegisterHelloCommand(commands, discord);
             Fun.RegisterSmellsCommand(commands, discord, rand);

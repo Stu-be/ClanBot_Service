@@ -31,5 +31,19 @@ namespace ClanBot_Service
 
                 });
         }
+
+        public static void RegisterShowMeTheCodeCommand(CommandService commands, DiscordClient discord)
+        {
+            commands.CreateCommand("Show me the code")
+                .Description("!show me the code - to view clanbot code.")
+                .AddCheck((command, user, channel) => !user.IsBot)
+                .Do(async (e) =>
+                {
+                    string text = "You can find me here https://github.com/Stu-be/ClanBot_Service/";
+           
+                    await e.Channel.SendMessage(text);
+
+                });
+        }
     }
 }
