@@ -301,3 +301,11 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+*.config
+*.dbml
+*.csproj
+*.resx
+*.layout
+bin/
+Properties/
