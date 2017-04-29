@@ -121,10 +121,11 @@ namespace ClanBot_Service
                         }
                         sucess = true;
                     }
-                    catch (Exception ex) { sucess = false; }
+                    catch (Exception ex) { sucess = false; throw ex; }
                     if (!sucess)
                     {
                         await e.Channel.SendMessage("THAT COMMAND IS NOT AVAILABLE RIGHT NOW!");
+ 
                     }
                 });
         }

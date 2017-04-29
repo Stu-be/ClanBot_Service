@@ -17,7 +17,7 @@ namespace ClanBot_Service
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[] 
             { 
-                new BotService() 
+                new ClanBotService() 
             };
             ServiceBase.Run(ServicesToRun);
         }

@@ -1,6 +1,6 @@
 ﻿namespace ClanBot_Service
 {
-    partial class BotService
+    partial class ClanBotService
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "ClasherDynastyBot";
+            this.ServiceName = "ClanBotService";
         }
 
         #endregion

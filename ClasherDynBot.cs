@@ -62,13 +62,15 @@ namespace ClanBot_Service
 
             discord.ExecuteAndWait(async () =>
             {
-                await discord.Connect(Properties.Settings.Default.Key, Discord.TokenType.Bot);
+                string key = System.Configuration.ConfigurationManager.AppSettings["Key"];
+                await discord.Connect(key, Discord.TokenType.Bot);
             });
         }
 
         private void Log(object sender, LogMessageEventArgs e)
         {
             Console.WriteLine(DateTime.Now + " - " + e.Message + " - " + e.Exception);
+            new LogWriter(DateTime.Now + " - " + e.Message + " --- " + e.Exception);
         }
     }
 }
