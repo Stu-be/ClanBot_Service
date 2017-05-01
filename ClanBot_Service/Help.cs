@@ -45,5 +45,19 @@ namespace ClanBot_Service
 
                 });
         }
+
+        public static void RegisterShowRecruitMessageCommand(CommandService commands, DiscordClient discord)
+        {
+            commands.CreateCommand("Recruit message")
+                .Description("!recruit message - to view a recruit message.")
+                .AddCheck((command, user, channel) => !user.IsBot)
+                .Do(async (e) =>
+                {
+                    string text = "** RECRUIT MESSAGE ** \n ```** RECRUITING: non-rushed TH9+ * Adults only * 3 wars p/w * Website used for war & stat tracking **```"; //99 characters
+
+                    await e.Channel.SendMessage(text);
+
+                });
+        }
     }
 }

@@ -73,6 +73,9 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Attendance.cs" />
+    <Compile Include="ClasherDynasty.cs">
+      <DependentUpon>ClasherDynasty.dbml</DependentUpon>
+    </Compile>
     <Compile Include="ClasherDynasty.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

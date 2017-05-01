@@ -111,13 +111,14 @@ namespace ClanBot_Service
                 .AddCheck((command, user, channel) => !user.IsBot)
                 .AddCheck((command, user, channel) => user.Roles.FirstOrDefault().Name == "@Co-Leader")
                 .Parameter("name", ParameterType.Required)
+                .Parameter("warning", ParameterType.Required)
                 .Do(async (e) =>
                 {
                     try
                     {
                         ClasherDynastyDataContext dc = new ClasherDynastyDataContext();
                         User user = (from u in dc.Users
-                                     where u.UserName.ToLower().Contains(e.GetArg(0).ToLower())
+                                     where u.UserName.ToLower() == (e.GetArg(0).ToLower())
                                      select u).First();
                         if (user != null)
                         {
@@ -131,7 +132,7 @@ namespace ClanBot_Service
                                 dc.UserWarnings.DeleteOnSubmit(uw);
                                 dc.SubmitChanges();
                                 string warning = (from w in dc.Warnings where w.WarningId == uw.WarningId select w.WarningName).ToString();
-                                await e.Channel.SendMessage(warning.ToUpper() + " WARNING REMOVED FROM " + e.GetArg(0).ToUpper());
+                                await e.Channel.SendMessage(uw.Warning.WarningName.ToUpper() + " WARNING REMOVED FROM " + e.GetArg(0).ToUpper());
                             }
                             else
                             {
@@ -142,7 +143,6 @@ namespace ClanBot_Service
                         {
                             await e.Channel.SendMessage(e.GetArg(0).ToUpper() + " NOT FOUND!");
                         }
-                        await e.Channel.SendMessage("WARING LOGGED AGAINST " + e.GetArg(0).ToUpper());
                     }
                     catch (Exception ex) { discord.Log.Error("RegisterGetClaimedBasesCommand", ex.Message); }
                 });
